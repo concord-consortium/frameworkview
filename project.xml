@@ -15,6 +15,12 @@
       <version>SNAPSHOT</version>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>swing</groupId>
+      <artifactId>swing</artifactId>
+      <version>SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 </project>
 
