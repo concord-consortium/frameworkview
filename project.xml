@@ -16,6 +16,7 @@
       <version>SNAPSHOT</version>
       <type>jar</type>
       <properties>
+        <cc.proj>Framework</cc.proj>
         <cc.path>Framework/lib</cc.path>
         <eclipse.dependency>true</eclipse.dependency>
       </properties>
@@ -26,7 +27,8 @@
       <version>SNAPSHOT</version>
       <type>jar</type>
       <properties>
-        <cc.path>Swing/lib</cc.path>
+        <cc.proj>Swing</cc.proj>
+        <cc.path>Swing/lib</cc.path>	
         <eclipse.dependency>true</eclipse.dependency>
       </properties>
     </dependency>
