@@ -14,12 +14,20 @@
       <artifactId>framework</artifactId>
       <version>SNAPSHOT</version>
       <type>jar</type>
+      <properties>
+        <cc.path>Framework/lib</cc.path>
+        <eclipse.dependency>true</eclipse.dependency>
+      </properties>
     </dependency>
     <dependency>
       <groupId>swing</groupId>
       <artifactId>swing</artifactId>
       <version>SNAPSHOT</version>
       <type>jar</type>
+      <properties>
+        <cc.path>Swing/lib</cc.path>
+        <eclipse.dependency>true</eclipse.dependency>
+      </properties>
     </dependency>
   </dependencies>
 </project>
