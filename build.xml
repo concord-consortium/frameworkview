@@ -1,0 +1,15 @@
+<project name="FrameworkView" default="jar" basedir =".">
+	<import file="../ProjectSets/standard-ant-targets.xml"/>
+
+	<!-- depends framework,ccswing -->
+	<path id="build-classpath">
+	   	<pathelement location="../Framework/lib/framework.jar"/>
+		<pathelement location="../Swing/lib/ccswing.jar"/>
+	</path>
+
+	<path id="run-classpath">
+		<path refid="build-classpath"/>	
+	</path>
+				
+	<property name="jar-name" value="frameworkview"/>
+</project>
