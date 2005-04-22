@@ -1,0 +1,54 @@
+<?xml encoding="UTF-8"?>
+<!ENTITY % boolean "(true | false)">
+<!ENTITY % javafont "(Dialog | DialogInput | Monospaced | Serif | SansSerif | Symbol | Default)">
+<!ENTITY % fontstyle "(b | p | i | bi)">
+<!ENTITY % textelements "#PCDATA | FONT | A | BR | TAB | SUP | SUB">
+<!ENTITY % align "(left | center | right)">
+<!ENTITY nbsp "&#160;">
+
+
+<!ELEMENT TEXT (%textelements; | P)*>
+
+<!ATTLIST TEXT
+	bgcolor  	CDATA 		"FFFFFF"
+	fgcolor  	CDATA 		"000000"
+	font	  	%javafont; 	#IMPLIED
+    size        CDATA 		#IMPLIED
+    face        %fontstyle;	#IMPLIED
+    autowrap	%boolean;	"true"
+	align		%align;		"left"
+	backimage   CDATA		#IMPLIED
+	tooltip	  	CDATA 		#IMPLIED
+>
+
+<!ELEMENT P (%textelements;)*>
+<!ATTLIST P
+	align		%align;	"left"
+>
+
+<!ELEMENT BR EMPTY>
+
+<!ELEMENT FONT (#PCDATA)>
+<!ATTLIST FONT
+	name	  	%javafont; 	#IMPLIED
+    size        CDATA 		#IMPLIED
+    face       %fontstyle;	#IMPLIED
+	color  		CDATA 		#IMPLIED
+>
+<!ELEMENT SUP (#PCDATA)>
+<!ELEMENT SUB (#PCDATA)>
+
+
+<!ELEMENT A (#PCDATA | FONT | SUP | SUB)*>
+<!ATTLIST A
+	ID			ID			#REQUIRED
+	href	  	CDATA 		#REQUIRED
+	tooltip	  	CDATA 		#IMPLIED
+>
+
+<!ELEMENT TAB EMPTY>
+<!ATTLIST TAB
+	n	  		CDATA 		"1"
+	dospaces	%boolean; 	"true"
+	spaces	  	CDATA 		"4"
+>
