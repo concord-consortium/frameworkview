@@ -35,6 +35,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.TableModel;
 
+import org.concord.framework.logging.Interaction;
 import org.concord.framework.logging.LogHintMessage;
 import org.concord.framework.logging.LogManager;
 import org.concord.framework.logging.Loggable;
@@ -47,6 +48,7 @@ implements Loggable
 {
 	protected int logmode = Loggable.LOG_NODE_EXIT;
 	LogManager logManager;
+	String logName = "Loggable Table";
 	
     public LoggableTable() {
     	super();
@@ -115,7 +117,35 @@ implements Loggable
 	public int  getLogMode(){
 		return logmode;
 	}
-    
+	public String getLogName()
+	{
+		return logName;
+	}
+	public void setLogName(String logName)
+	{
+		this.logName = logName;
+	}
+	public void initLogState()
+	{
+		
+	}
+	public Interaction getFirstInteraction()
+	{
+		return null;
+	}
+	public Interaction getActionInteraction()
+	{
+		return null;
+	}
+	public Interaction getLastInteraction()
+	{
+		return null;
+	}
+	public int  getDefaultLogMode()
+	{
+		return Loggable.LOG_NODE_EXIT;
+	}
+  
 //	AbstractTableModel.java
 //	DefaultTableModel.java
 //			tableModel1.setColumnCount(5);

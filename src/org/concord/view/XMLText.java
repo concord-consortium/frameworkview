@@ -536,7 +536,7 @@ final static int FONT_SUB_SUP_SIZE_SHIFT    = -3;
 	
 	public static String getXMLTextHeader(){
 		String str = "<?xml version=\"1.0\"?>" + eolStr;
-		URL dtdURL = XMLText.class.getResource("/org/concord/pedagogica/dtd/ccxmltext.dtd");
+		URL dtdURL = XMLText.class.getResource("/org/concord/view/dtd/xmltext.dtd");
 		String dtdStr = dtdURL.toExternalForm();
 		str += ("<!DOCTYPE TEXT PUBLIC \"-//Concord.ORG//DTD LabBook Description//EN\" \"" +
 				dtdStr + "\">" + eolStr);
