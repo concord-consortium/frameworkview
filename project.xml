@@ -12,7 +12,7 @@
         <dependency>
             <groupId>framework</groupId>
             <artifactId>framework</artifactId>
-            <version>SNAPSHOT</version>
+            <version>1.0</version>
             <type>jar</type>
             <properties>
                 <cc.proj>Framework</cc.proj>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>swing</groupId>
             <artifactId>swing</artifactId>
-            <version>SNAPSHOT</version>
+            <version>1.0</version>
             <type>jar</type>
             <properties>
                 <cc.proj>Swing</cc.proj>
