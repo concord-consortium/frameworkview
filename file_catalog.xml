@@ -39,11 +39,18 @@
         <md5sum>76512f5cd9377b7f70df4b745f3eb356</md5sum>
     </file>
     <file>
+        <name>file_catalog.xml</name>
+        <rev>1.2</rev>
+        <modtime>1115822769000</modtime>
+        <size>3289</size>
+        <md5sum>3109af4bfdc40cb1ba18c340b967be67</md5sum>
+    </file>
+    <file>
         <name>project.xml</name>
-        <rev>1.8</rev>
-        <modtime>1108068975000</modtime>
-        <size>1057</size>
-        <md5sum>ff3119bc0e56a0a47c14f1863fd9eb5c</md5sum>
+        <rev>1.9</rev>
+        <modtime>1115822772000</modtime>
+        <size>1212</size>
+        <md5sum>d1f140860b823a0c02d3f52388138fb5</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/ComponentWrapper.java</name>
