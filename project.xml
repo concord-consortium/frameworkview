@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <!-- Inherit main project xml file -->
-  <extend>../Builds/project.xml</extend>
-  <!-- Project specific parameters -->
-  <pomVersion>3</pomVersion>
-  <artifactId>frameworkview</artifactId>
-  <name>FrameworkView</name>
-  <groupId>${pom.artifactId}</groupId>
-  <currentVersion>1.0</currentVersion>
-
-  <dependencies>
-    <dependency>
-      <groupId>framework</groupId>
-      <artifactId>framework</artifactId>
-      <version>SNAPSHOT</version>
-      <type>jar</type>
-      <properties>
-        <cc.proj>Framework</cc.proj>
-        <cc.path>Framework/lib</cc.path>
-        <eclipse.dependency>true</eclipse.dependency>
-      </properties>
-    </dependency>
-    <dependency>
-      <groupId>swing</groupId>
-      <artifactId>swing</artifactId>
-      <version>SNAPSHOT</version>
-      <type>jar</type>
-      <properties>
-        <cc.proj>Swing</cc.proj>
-        <cc.path>Swing/lib</cc.path>	
-        <eclipse.dependency>true</eclipse.dependency>
-      </properties>
-    </dependency>
-  </dependencies>
+    <!-- Inherit main project xml file -->
+    <extend>../Builds/project.xml</extend>
+    <!-- Project specific parameters -->
+    <pomVersion>3</pomVersion>
+    <artifactId>frameworkview</artifactId>
+    <name>FrameworkView</name>
+    <groupId>${pom.artifactId}</groupId>
+    <currentVersion>1.0</currentVersion>
+    <dependencies>
+        <dependency>
+            <groupId>framework</groupId>
+            <artifactId>framework</artifactId>
+            <version>SNAPSHOT</version>
+            <type>jar</type>
+            <properties>
+                <cc.proj>Framework</cc.proj>
+                <cc.path>Framework/lib</cc.path>
+                <eclipse.dependency>true</eclipse.dependency>
+            </properties>
+        </dependency>
+        <dependency>
+            <groupId>swing</groupId>
+            <artifactId>swing</artifactId>
+            <version>SNAPSHOT</version>
+            <type>jar</type>
+            <properties>
+                <cc.proj>Swing</cc.proj>
+                <cc.path>Swing/lib</cc.path>
+                <eclipse.dependency>true</eclipse.dependency>
+            </properties>
+        </dependency>
+    </dependencies>
 </project>
+
