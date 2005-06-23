@@ -10,6 +10,9 @@
 	<path id="run-classpath">
 		<path refid="build-classpath"/>	
 	</path>
+	
+	<patternset id="binary-file-pattern"
+		includes="org/concord/pedagogica/dtd/**"/>
 				
 	<property name="jar-name" value="frameworkview"/>
 </project>
