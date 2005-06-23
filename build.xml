@@ -12,7 +12,7 @@
 	</path>
 	
 	<patternset id="binary-file-pattern"
-		includes="org/concord/pedagogica/dtd/**"/>
+		includes="org/concord/view/dtd/**"/>
 				
 	<property name="jar-name" value="frameworkview"/>
 </project>
