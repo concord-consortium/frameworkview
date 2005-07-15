@@ -47,6 +47,7 @@ import org.concord.framework.util.SimpleTreeNode;
  */
 public class SimpleTreeModel implements TreeModel 
 {
+    
 	protected SimpleTreeNode root;
 	protected Vector treeModelListeners = new Vector();
 
