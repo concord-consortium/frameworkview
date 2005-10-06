@@ -3,6 +3,7 @@
     <server>cvs.concord.org</server>
     <repo>/home/buildspace/CodeBank</repo>
     <module>Projects/FrameworkView</module>
+    <tagname>rel_1_2</tagname>
     <file>
         <name>.classpath</name>
         <rev>1.1</rev>
@@ -33,73 +34,73 @@
     </file>
     <file>
         <name>build.xml</name>
-        <rev>1.1</rev>
-        <modtime>1107135778000</modtime>
-        <size>444</size>
-        <md5sum>76512f5cd9377b7f70df4b745f3eb356</md5sum>
+        <rev>1.3</rev>
+        <modtime>1119545882000</modtime>
+        <size>523</size>
+        <md5sum>99f74c206f6a563144a2a29f1f61f934</md5sum>
     </file>
     <file>
         <name>file_catalog.xml</name>
-        <rev>1.4</rev>
-        <modtime>1115822817000</modtime>
+        <rev>1.5</rev>
+        <modtime>1116274602000</modtime>
         <size>3499</size>
-        <md5sum>d2649b0df98330820da79abcd4b41e96</md5sum>
+        <md5sum>3210e7b35ac9e57e3f95b2658ddad554</md5sum>
     </file>
     <file>
         <name>project.xml</name>
-        <rev>1.12</rev>
-        <modtime>1116274599000</modtime>
+        <rev>1.14</rev>
+        <modtime>1128625904000</modtime>
         <size>1202</size>
-        <md5sum>ec02795f0cb17140f3db3a6c6a71a8df</md5sum>
+        <md5sum>d07ecb473ba0c3bda6e03939d64a2f76</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/ComponentWrapper.java</name>
-        <rev>1.2</rev>
-        <modtime>1108061419000</modtime>
-        <size>1109</size>
-        <md5sum>220d95d394cc85ec8e8e4a3e8c21ca5b</md5sum>
+        <rev>1.3</rev>
+        <modtime>1126279116000</modtime>
+        <size>1122</size>
+        <md5sum>bfbfe415ed66ed5033a485e6e2e757e0</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/ComponentWrapperFactory.java</name>
-        <rev>1.1</rev>
-        <modtime>1107132450000</modtime>
-        <size>2016</size>
-        <md5sum>357d20e36fd0e2f45646e58e9b5b9641</md5sum>
+        <rev>1.2</rev>
+        <modtime>1126279116000</modtime>
+        <size>2029</size>
+        <md5sum>6aa977edd115328ad0e1bf2114014671</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/LoggableTable.java</name>
-        <rev>1.3</rev>
-        <modtime>1114142701000</modtime>
-        <size>5698</size>
-        <md5sum>a3cb9c57a0da508a23d958c05573ca02</md5sum>
+        <rev>1.4</rev>
+        <modtime>1126279116000</modtime>
+        <size>5711</size>
+        <md5sum>57bc23036c5f76439585b89bb0783103</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/PrintUserMessageHandler.java</name>
-        <rev>1.2</rev>
-        <modtime>1108061419000</modtime>
-        <size>2188</size>
-        <md5sum>ce62521ba8c5986299a8a0b8e125e5a8</md5sum>
+        <rev>1.3</rev>
+        <modtime>1126279116000</modtime>
+        <size>2201</size>
+        <md5sum>847ec0a6eed200d162ffb0535e1fda12</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/SimpleTreeModel.java</name>
-        <rev>1.2</rev>
-        <modtime>1108061419000</modtime>
-        <size>4474</size>
-        <md5sum>65e883a1e62425c549cdeba233413df9</md5sum>
+        <rev>1.4</rev>
+        <modtime>1126279116000</modtime>
+        <size>4492</size>
+        <md5sum>899d12b7d4b367eafe80e43fccc566d8</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/SwingUserMessageHandler.java</name>
-        <rev>1.2</rev>
-        <modtime>1108061419000</modtime>
-        <size>2494</size>
-        <md5sum>8fe13c4b08ee5116f78edd6bb91cf823</md5sum>
+        <rev>1.3</rev>
+        <modtime>1126279116000</modtime>
+        <size>2507</size>
+        <md5sum>77b2b911c5ed5b0dbfc49e77bd656080</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/XMLText.java</name>
-        <rev>1.3</rev>
-        <modtime>1114142849000</modtime>
-        <size>50080</size>
-        <md5sum>985d739fba4134b8b5ebcc287f351f54</md5sum>
+        <rev>1.4</rev>
+        <modtime>1126279116000</modtime>
+        <size>50093</size>
+        <md5sum>a5185fe7fab9f9449e0042ca8b409815</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/dtd/xmltext.dtd</name>
