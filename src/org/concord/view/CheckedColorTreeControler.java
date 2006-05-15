@@ -23,9 +23,9 @@
 
 /*
  * Last modification information:
- * $Revision: 1.2 $
- * $Date: 2006-05-05 16:20:12 $
- * $Author: maven $
+ * $Revision: 1.3 $
+ * $Date: 2006-05-15 20:54:51 $
+ * $Author: scytacki $
  *
  * Licence Information
  * Copyright 2004 The Concord Consortium 
@@ -89,6 +89,7 @@ public class CheckedColorTreeControler
     AbstractAction clearAction;
     
     JPanel treePanel;
+    JPanel controlPanel;
     
     public JComponent setup(CheckedColorTreeModel customTreeModel)
     {
@@ -126,7 +127,7 @@ public class CheckedColorTreeControler
         treePanel = new JPanel();
         treePanel.setLayout(new BorderLayout());
 
-        JPanel controlPanel = new JPanel();
+        controlPanel = new JPanel();
         controlPanel.setLayout(new GridLayout(3,1));
         JButton bNew = new JButton(newDataSetAction);
         JButton bDelete = new JButton(deleteDataSetAction);
@@ -324,7 +325,7 @@ public class CheckedColorTreeControler
         }
         
         TreeNode rootNode = cTree.getRootNode();
-        if(rootNode.getChildCount() > 1) {
+        if(rootNode.getChildCount() >= 1) {
             lastSelectedPath = cTree.getPathForRow(0);
             cTree.setSelectionPath(lastSelectedPath);
             
@@ -339,6 +340,13 @@ public class CheckedColorTreeControler
         cTree.addMouseListener(ml);
 
         treePanel.add(cTree, BorderLayout.CENTER);
-        treePanel.invalidate();
+        
+        // I don't understand this.  By calling the add method I would have
+        // expected treePanel to automatically call validate or invalidate
+        // invalidate doesn't actually work here
+        // The only thing that I found works here is to call validate, that forces
+        // the treePanel to relayout the components, otherwise the cTree ends up
+        // behind the controlPanel. 
+        treePanel.validate();       
     }
 }
