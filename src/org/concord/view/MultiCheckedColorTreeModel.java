@@ -23,9 +23,9 @@
 
 /*
  * Last modification information:
- * $Revision: 1.2 $
- * $Date: 2006-05-05 16:20:12 $
- * $Author: maven $
+ * $Revision: 1.3 $
+ * $Date: 2006-05-15 20:54:51 $
+ * $Author: scytacki $
  *
  * Licence Information
  * Copyright 2004 The Concord Consortium 
@@ -86,7 +86,7 @@ public class MultiCheckedColorTreeModel
                 (CheckedColorTreeModel)models.get(i);
             Vector itemList = (Vector)item;
             Object subItem = null;
-            if(itemList != null) {
+            if(itemList != null && itemList.size() > i) {
                 subItem = itemList.get(i);
             }
             treeModel.setSelectedItem(subItem, checked);
