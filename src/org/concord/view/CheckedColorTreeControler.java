@@ -23,8 +23,8 @@
 
 /*
  * Last modification information:
- * $Revision: 1.3 $
- * $Date: 2006-05-15 20:54:51 $
+ * $Revision: 1.4 $
+ * $Date: 2006-05-16 19:12:20 $
  * $Author: scytacki $
  *
  * Licence Information
@@ -91,7 +91,8 @@ public class CheckedColorTreeControler
     JPanel treePanel;
     JPanel controlPanel;
     
-    public JComponent setup(CheckedColorTreeModel customTreeModel)
+    public JComponent setup(CheckedColorTreeModel customTreeModel,
+    		boolean showNew)
     {
         treeModel = customTreeModel;
         
@@ -132,7 +133,10 @@ public class CheckedColorTreeControler
         JButton bNew = new JButton(newDataSetAction);
         JButton bDelete = new JButton(deleteDataSetAction);
         JButton bRename = new JButton(renameAction);
-        controlPanel.add(bNew);
+        if(showNew){
+        	controlPanel.add(bNew);
+        }
+        
         controlPanel.add(bDelete);
         controlPanel.add(bRename);
         bNew.setOpaque(false);
@@ -270,7 +274,6 @@ public class CheckedColorTreeControler
             Object item = nodeGraphableMap.get(obj);
             nodeGraphableMap.remove(obj);
             treeModel.removeItem(null, item);
-            Color color = treeModel.getItemColor(item);
             if(checkedTreeNodes.contains(obj))checkedTreeNodes.removeElement(obj);
             //System.out.println(dataGraphable + " removed too");
         }
