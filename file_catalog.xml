@@ -3,7 +3,7 @@
     <server>cvs.concord.org</server>
     <repo>/home/buildspace/CodeBank</repo>
     <module>Projects/FrameworkView</module>
-    <tagname>rel_1_4</tagname>
+    <tagname>rel_1_5</tagname>
     <file>
         <name>.classpath</name>
         <rev>1.1</rev>
@@ -41,17 +41,17 @@
     </file>
     <file>
         <name>file_catalog.xml</name>
-        <rev>1.7</rev>
-        <modtime>1132000476000</modtime>
-        <size>3530</size>
-        <md5sum>773510752c29ccdaa639a562f61505c6</md5sum>
+        <rev>1.8</rev>
+        <modtime>1147895152000</modtime>
+        <size>4020</size>
+        <md5sum>4d637f3335fb602d12a3181ebe6fa2b0</md5sum>
     </file>
     <file>
         <name>project.xml</name>
-        <rev>1.18</rev>
-        <modtime>1147895145000</modtime>
-        <size>1202</size>
-        <md5sum>ce6060b7d420ad3906a622d349b6d4b4</md5sum>
+        <rev>1.21</rev>
+        <modtime>1152821507000</modtime>
+        <size>1487</size>
+        <md5sum>12fda42968040f370a949ee4b2127cbe</md5sum>
     </file>
     <file>
         <name>src/org/concord/view/CheckedColorTreeControler.java</name>
