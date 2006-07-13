@@ -33,4 +33,16 @@
       </properties>
     </dependency>
   </dependencies>
+  
+    <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src</directory>
+        <includes>
+          <include>org/concord/view/dtd/**</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+  
 </project>
