@@ -23,8 +23,8 @@
 
 /*
  * Last modification information:
- * $Revision: 1.4 $
- * $Date: 2006-05-16 19:12:20 $
+ * $Revision: 1.5 $
+ * $Date: 2007-05-25 10:43:54 $
  * $Author: scytacki $
  *
  * Licence Information
@@ -351,5 +351,16 @@ public class CheckedColorTreeControler
         // the treePanel to relayout the components, otherwise the cTree ends up
         // behind the controlPanel. 
         treePanel.validate();       
+    }
+    
+    public void setSelectedRow(int row)
+    {
+        lastSelectedPath = cTree.getPathForRow(row);
+        cTree.setSelectionPath(lastSelectedPath);
+        
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)cTree.getLastSelectedPathComponent();
+        CCJCheckBoxTree.NodeHolder holder = (CCJCheckBoxTree.NodeHolder)node.getUserObject();
+        Object selectedItem = nodeGraphableMap.get(holder);
+        treeModel.setSelectedItem(selectedItem, true);
     }
 }
