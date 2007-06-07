@@ -23,9 +23,9 @@
 
 /*
  * Last modification information:
- * $Revision: 1.5 $
- * $Date: 2007-05-25 10:43:54 $
- * $Author: scytacki $
+ * $Revision: 1.6 $
+ * $Date: 2007-06-07 14:53:21 $
+ * $Author: sfentress $
  *
  * Licence Information
  * Copyright 2004 The Concord Consortium 
@@ -47,7 +47,9 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.UIManager;
+import javax.swing.border.LineBorder;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -145,8 +147,15 @@ public class CheckedColorTreeControler
         
         controlPanel.setBackground(Color.WHITE);
         
+        //Added scroll bar so multiple data sets won't roll off screen.
+        //Would be nice if there were a way to have scroll appear only as
+        //needed, but NOT cut off parts of data names.
+        
+        JScrollPane cTreeScroll = new JScrollPane(cTree);
+        cTreeScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		
         treePanel.setBackground(UIManager.getColor("Tree.textBackground"));
-        treePanel.add(cTree, BorderLayout.CENTER);
+        treePanel.add(cTreeScroll, BorderLayout.CENTER);
         treePanel.add(controlPanel, BorderLayout.NORTH);
                
         cTree.addTreeSelectionListener(tsl);
