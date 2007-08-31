@@ -131,18 +131,17 @@ public class SimpleTreeModel implements TreeModel
                            + path + " --> " + newValue);
         SimpleTreeNode node = (SimpleTreeNode)path.getLastPathComponent();
         node.setName((String)newValue);
-        fireTreeStructureChanged(node);
+        fireTreeStructureChanged(path);
     }
 
     /**
      * The only event raised by this model is TreeStructureChanged with the
      * root as path, i.e. the whole tree has changed.
      */
-    public void fireTreeStructureChanged(SimpleTreeNode rootOfChange) 
+    public void fireTreeStructureChanged(TreePath pathToRootOfChange) 
     {
         int len = treeModelListeners.size();
-        TreeModelEvent e = new TreeModelEvent(this, 
-                                              new Object[] {rootOfChange});
+        TreeModelEvent e = new TreeModelEvent(this, pathToRootOfChange);
         for (int i = 0; i < len; i++) {
             ((TreeModelListener)treeModelListeners.elementAt(i)).
                     treeStructureChanged(e);
