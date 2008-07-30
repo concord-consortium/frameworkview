@@ -49,7 +49,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.UIManager;
-import javax.swing.border.LineBorder;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -92,10 +91,13 @@ public class CheckedColorTreeControler
     
     JPanel treePanel;
     JPanel controlPanel;
+
+	private boolean editable;
     
     public JComponent setup(CheckedColorTreeModel customTreeModel,
-    		boolean showNew)
+    		boolean showNew, boolean editable)
     {
+    	this.editable = editable;
         treeModel = customTreeModel;
         
         createActions();
@@ -156,7 +158,9 @@ public class CheckedColorTreeControler
 		
         treePanel.setBackground(UIManager.getColor("Tree.textBackground"));
         treePanel.add(cTreeScroll, BorderLayout.CENTER);
-        treePanel.add(controlPanel, BorderLayout.NORTH);
+        if(editable){
+        	treePanel.add(controlPanel, BorderLayout.NORTH);
+        }
                
         cTree.addTreeSelectionListener(tsl);
         cTree.addMouseListener(ml);
@@ -188,6 +192,10 @@ public class CheckedColorTreeControler
     }
     
     private void renameNode() {
+    	if(!editable){
+    		return;
+    	}
+    	
         String newLabel = cTree.renameCurrentNode();
         DefaultMutableTreeNode node = (DefaultMutableTreeNode) cTree.getLastSelectedPathComponent();
         CCJCheckBoxTree.NodeHolder holder = 
