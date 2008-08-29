@@ -156,6 +156,7 @@ public class CheckedColorTreeControler
         JScrollPane cTreeScroll = new JScrollPane(cTree);
         cTreeScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		
+        // background white on a Mac
         treePanel.setBackground(UIManager.getColor("Tree.textBackground"));
         treePanel.add(cTreeScroll, BorderLayout.CENTER);
         if(editable){
