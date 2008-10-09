@@ -535,10 +535,12 @@ final static int FONT_SUB_SUP_SIZE_SHIFT    = -3;
 	
 	public static String getXMLTextHeader(){
 		String str = "<?xml version=\"1.0\"?>" + eolStr;
-		URL dtdURL = XMLText.class.getResource("/org/concord/view/dtd/xmltext.dtd");
-		String dtdStr = dtdURL.toExternalForm();
-		str += ("<!DOCTYPE TEXT PUBLIC \"-//Concord.ORG//DTD LabBook Description//EN\" \"" +
-				dtdStr + "\">" + eolStr);
+		// This was broken in Mac OS X 10.4 Java version 1.5.0_16.
+		// The string dtdStr below no longer renders into a parsable URL
+		// URL dtdURL = XMLText.class.getResource("/org/concord/view/dtd/xmltext.dtd");
+		// String dtdStr = dtdURL.toExternalForm();
+		// str += ("<!DOCTYPE TEXT PUBLIC \"-//Concord.ORG//DTD LabBook Description//EN\" \"" +
+		// 		dtdStr + "\">" + eolStr);
 		return str;
 	}
 	public static String getTestDoc(){
