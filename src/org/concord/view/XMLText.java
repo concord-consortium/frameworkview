@@ -48,6 +48,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.StringReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -538,9 +539,16 @@ final static int FONT_SUB_SUP_SIZE_SHIFT    = -3;
 		// This was broken in Mac OS X 10.4 Java version 1.5.0_16.
 		// The string dtdStr below no longer renders into a parsable URL
 		// URL dtdURL = XMLText.class.getResource("/org/concord/view/dtd/xmltext.dtd");
-		// String dtdStr = dtdURL.toExternalForm();
-		// str += ("<!DOCTYPE TEXT PUBLIC \"-//Concord.ORG//DTD LabBook Description//EN\" \"" +
-		// 		dtdStr + "\">" + eolStr);
+		try {
+			URL dtdURL = new URL("http://svn.concord.org/svn/projects/trunk/common/java/core/frameworkview/src/org/concord/view/dtd/xmltext.dtd");
+		
+			String dtdStr = dtdURL.toExternalForm();
+			str += ("<!DOCTYPE TEXT PUBLIC \"-//Concord.ORG//DTD LabBook Description//EN\" \"" +
+					dtdStr + "\">" + eolStr);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return str;
 	}
 	public static String getTestDoc(){
