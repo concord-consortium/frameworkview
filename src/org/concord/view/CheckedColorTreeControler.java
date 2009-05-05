@@ -233,7 +233,9 @@ public class CheckedColorTreeControler
         public void valueChanged(TreeSelectionEvent e) {
             if(e.getSource() == cTree) {
                 TreePath newSelectedPath = cTree.getSelectionPath();
-                if(newSelectedPath != null && newSelectedPath != lastSelectedPath) {
+                if (newSelectedPath == null){
+                    treeModel.setSelectedItem(null, false);
+                } else if(newSelectedPath != lastSelectedPath) {
                     lastSelectedPath = newSelectedPath;
                     DefaultMutableTreeNode node = 
                         (DefaultMutableTreeNode)lastSelectedPath.getLastPathComponent();
@@ -242,9 +244,7 @@ public class CheckedColorTreeControler
 
                     Object item = nodeGraphableMap.get(nodeHolder);
                     treeModel.setSelectedItem(item, nodeHolder.checked);
-                } else {
-                    treeModel.setSelectedItem(null, false);
-                }
+                } 
             }
         }
     };
