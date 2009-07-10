@@ -29,11 +29,24 @@
  */
 package org.concord.view;
 
+import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Frame;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.IOException;
 
+import javax.swing.BorderFactory;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JRootPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
 
 import org.concord.framework.text.UserMessageHandler;
+import org.concord.framework.text.UserMessageHandlerExt1;
 
 /**
  * @author Informaiton Services
@@ -42,7 +55,7 @@ import org.concord.framework.text.UserMessageHandler;
  * Window - Preferences - Java - Code Style - Code Templates
  */
 public class SwingUserMessageHandler 
-	implements UserMessageHandler {
+	implements UserMessageHandlerExt1 {
 
 	private Component component;
 
@@ -76,5 +89,48 @@ public class SwingUserMessageHandler
 		JOptionPane.showMessageDialog(component, message,
 				title, JOptionPane.INFORMATION_MESSAGE);
 	}
+
+	public void showMessage(String message, String title, final String details) {
+		String[] options = new String[]{"Ok", "Details"};		
+		final JOptionPane optionsPane = 
+			new JOptionPane(message,
+					JOptionPane.OK_OPTION, JOptionPane.INFORMATION_MESSAGE, 
+					null, options, options[0]){
+			JScrollPane detailsScroll = null;
+			
+			public void setValue(Object newValue) {
+				if(newValue.equals("Details")){
+					JDialog d = (JDialog) SwingUtilities.getRoot(this);
+					if(detailsScroll != null){
+					    getRootPane().getContentPane().remove(detailsScroll);
+					    detailsScroll = null;
+					    d.setResizable(false);
+					} else {
+						JTextArea textArea = new JTextArea(7, 50);
+						textArea.setLineWrap(true);
+						textArea.setWrapStyleWord(true);
+						textArea.setText(details);
+						detailsScroll = new JScrollPane(textArea);
+						detailsScroll.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+						detailsScroll.setBackground(null);
+						textArea.setCaretPosition(0);
+						getRootPane().getContentPane().add(detailsScroll, BorderLayout.SOUTH);
+						d.setResizable(true);
+					}
+					d.pack();
+				} else {
+					super.setValue(newValue);
+				}
+			}
+
+		};
+
+		final JDialog dialog = optionsPane.createDialog(component, title);
+		
+		dialog.pack();
+		dialog.setVisible(true);		
+	}
+	
+	
 
 }
