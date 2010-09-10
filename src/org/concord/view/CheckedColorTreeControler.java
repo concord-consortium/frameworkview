@@ -102,6 +102,7 @@ public class CheckedColorTreeControler
         
         createActions();
 
+        cTree.setName("colorTree");
         cTree.setCellRenderer(new CCJCheckBoxRenderer());
         cTree.setRootVisible(false);
 
